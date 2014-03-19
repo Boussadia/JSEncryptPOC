@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>POC demande assisté de génération de CSR en JavaScript</title>
+
+		<meta charset="utf-8">
+
+		<!-- Bibliothéques JavaSScript nécessaires-->
+		<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="/js/jquery-cookie/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/jsencrypt/bin/jsencrypt.js"></script>
+		<script type="text/javascript" src="/js/sjcl/sjcl.js"></script>
+
+		<!-- Application -->
+		<script type="text/javascript" src="/js/app.js"></script>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<label for="passphrase"> PASSPHRASE</label>
+				<input id="passphrase" name="passphrase" type="text" value=""></input>
+				<button id="get_private_key"> Récupérer clé privée depuis les cookeis</button>
+				<button id="gen_keys"> Générer biclé </button>
+				<button id="save_keys"> Sauvegarder clé privé </button>
+			</fieldset>
+			<p id="wait" style="display:none;">Génération du biclé en cours</p>
+			<fieldset>
+				<label for="private_key"> Clé privé </label>
+				<textarea id="private_key" name="private_key" cols="100" rows="10"></textarea>
+			</fieldset>
+		</form>
+
+	</body>
+</html>
